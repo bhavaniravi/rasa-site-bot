@@ -1,0 +1,7 @@
+{
+  "backend": "mitie",
+  "mitie_file": "data/total_word_feature_extractor.dat",
+  "path" : "./",
+  "data" : "data/sitebot-data.json",
+  "num_threads":100
+}

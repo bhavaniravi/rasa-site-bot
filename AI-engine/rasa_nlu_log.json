@@ -1,0 +1,71 @@
+[
+  {
+    "entities": [], 
+    "confidence": 0.7503025949407385, 
+    "intent": "greet", 
+    "text": "hi"
+  }, 
+  {
+    "entities": [], 
+    "confidence": 0.3309503410702648, 
+    "intent": "greet", 
+    "text": "yo"
+  }, 
+  {
+    "entities": [
+      {
+        "start": 0, 
+        "end": 9, 
+        "value": "first day", 
+        "entity": "time"
+      }
+    ], 
+    "confidence": 0.19041142788243318, 
+    "intent": "affirm", 
+    "text": "first day"
+  }, 
+  {
+    "entities": [], 
+    "confidence": 1.0887962093977857, 
+    "intent": "greet", 
+    "text": "hey"
+  }, 
+  {
+    "entities": [
+      {
+        "start": 26, 
+        "end": 29, 
+        "value": "now", 
+        "entity": "time"
+      }
+    ], 
+    "confidence": 0.4448289239245017, 
+    "intent": "event-request", 
+    "text": "what events are happening now"
+  }, 
+  {
+    "entities": [
+      {
+        "start": 0, 
+        "end": 5, 
+        "value": "heeey", 
+        "entity": "time"
+      }
+    ], 
+    "confidence": 0.21558314243108612, 
+    "intent": "greet", 
+    "text": "heeey"
+  }, 
+  {
+    "entities": [], 
+    "confidence": 0.09125234572941558, 
+    "intent": "affirm", 
+    "text": "whts up"
+  }, 
+  {
+    "entities": [], 
+    "confidence": 0.1148097920349114, 
+    "intent": "affirm", 
+    "text": "whats up"
+  }
+]

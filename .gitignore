@@ -1,0 +1,6 @@
+*.pyc
+AI-engine/logs/*
+AI-engine/model_*
+bot-application/migrations
+*.db
+*.dat

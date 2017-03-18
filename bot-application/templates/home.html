@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block header %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/chat_interface.css") }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/styling.css") }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/temporary.css") }}">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<br/>
+<input id="interview_type" type="hidden" value="{{ interview_type }}">
+<input id="organization" type="hidden" value="{{ organization }}">
+<input id="date" type="hidden" value="{{ date }}">
+<input id="interview_id" type="hidden" value="{{ interview_id }}">
+<div class="row">
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="chat_window">
+                <div class="top_menu">
+                    <div class="title">Sitebot</div>
+                </div>
+                <ul class="messages"></ul>
+                <div class="bottom_wrapper clearfix">
+                    <div class="message_input_wrapper">
+                        <input id="msg_input" class="message_input" placeholder="Say Hi to begin chat..." />
+                    </div>
+                    <div class="send_message">
+                        <div class="icon">
+                        <i class="material-icons" style="font-size:31px;">send</i></div>
+                         <div class="text"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="message_template">
+                <li class="message">
+                    <div class="avatar"></div>
+                    <div class="text_wrapper">
+                        <div class="text"></div>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block other_footers %}
+<script src="{{ url_for('static', filename="js/bind.js") }}"></script>
+
+<style>
+.ace-github .ace_gutter {
+    background: white;
+}
+.header_container{
+    padding-left: 0px;
+}
+.header_div{
+    padding-left: 0px;
+}
+</style>
+{% endblock %}
