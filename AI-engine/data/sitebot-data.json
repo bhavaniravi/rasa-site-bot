@@ -357,6 +357,24 @@
                     "entity": "event_name"
                     }
                 ]
+            },
+            {
+                "text": "what event is happening 2 tomorrow",
+                "intent": "event-request",
+                "entities": [
+                    {
+                    "start": 24,
+                    "end": 25,
+                    "value": "2",
+                    "entity": "time"
+                    },
+                    {
+                    "start": 26,
+                    "end": 34,
+                    "value": "2",
+                    "entity": "time"
+                    }
+                ]
             }
         ]
     }

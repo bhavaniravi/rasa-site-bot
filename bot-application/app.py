@@ -32,14 +32,13 @@ def get_event(day=None,time=None,place=None):
     if not day and not time:
         return get_random_response("events_link")
     date_time = get_date_time(day,time)
+    print date_time
     events = Event.query.filter(Event.date_time>=date_time,
                                 Event.date_time <= date_time + datetime.timedelta(minutes=30))
     events = events.all()
-    print events
     if not events:
         return get_random_response("no_events")+ "<br/>" + get_random_response("events_link")
     event_description = "<br/>".join(event.event_description+" at "+event.place for event in events)
-    print event_description
     return event_description
 
 @app.route('/chat',methods=["POST"])

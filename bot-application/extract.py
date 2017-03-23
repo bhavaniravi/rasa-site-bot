@@ -23,6 +23,17 @@ data2 = r2.text
 tracks = json.loads(data2)["0.0.1"][0]
 DATE_ONE = "2017-03-18"
 DATE_TWO = "2017-03-19"
+
+schedule["2017-03-23"] = schedule[DATE_ONE]
+del schedule[DATE_ONE]
+
+schedule["2017-03-24"] = schedule[DATE_TWO]
+del schedule[DATE_TWO]
+
+
+DATE_ONE = "2017-03-23"
+DATE_TWO = "2017-03-24"
+
 from datetime import datetime
 # DayOne Loop
 for events in schedule[DATE_ONE]:
