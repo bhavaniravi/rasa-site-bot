@@ -1,0 +1,6 @@
+{
+  "backend": "spacy_sklearn",
+  "path" : "./",
+  "data" : "data/sitebot-data.json",
+  "num_threads":100
+}
