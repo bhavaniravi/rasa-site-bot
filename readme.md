@@ -42,7 +42,7 @@ A site bot build using [rasa-nlu](http://rasa.ai).
 
 7. To setup the knowledge base for the bot run `extract.py` under bot_applications
 
-    `python extract.py'
+    `python extract.py`
     You will have a sqlite `app.db` created
 
 8. To run the application run
