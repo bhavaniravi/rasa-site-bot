@@ -7,12 +7,12 @@
                 "entities": []
             },
             {
-                "text": "who do you do?",
+                "text": "what do you do?",
                 "intent": "intro",
                 "entities": []
             },
             {
-                "text": "who can you do for me?",
+                "text": "what can you do for me?",
                 "intent": "intro",
                 "entities": []
             },

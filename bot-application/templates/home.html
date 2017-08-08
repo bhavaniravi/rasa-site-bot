@@ -1,16 +1,12 @@
 {% extends "base.html" %}
 
 {% block header %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/chat_interface.css") }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename="css/temporary.css") }}">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-<br/>
-<input id="interview_type" type="hidden" value="{{ interview_type }}">
-<input id="organization" type="hidden" value="{{ organization }}">
-<input id="date" type="hidden" value="{{ date }}">
-<input id="interview_id" type="hidden" value="{{ interview_id }}">
 <div class="row">
     <div class="col-sm-6">
         <div class="row">
