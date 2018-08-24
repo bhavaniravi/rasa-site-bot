@@ -4,4 +4,5 @@
   "path" : "./",
   "data" : "data/sitebot-data.json",
   "num_threads":100
+  "pipeline": "mitie"
 }
