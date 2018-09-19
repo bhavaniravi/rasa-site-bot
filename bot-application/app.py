@@ -32,7 +32,7 @@ def get_event(day=None,time=None,place=None):
     if not day and not time:
         return get_random_response("events_link")
     date_time = get_date_time(day,time)
-    print date_time
+    print (date_time)
     events = Event.query.filter(Event.date_time>=date_time,
                                 Event.date_time <= date_time + datetime.timedelta(minutes=30))
     events = events.all()
@@ -58,7 +58,7 @@ def chat():
             response_text = get_random_response(intent)
         return jsonify({"status":"success","response":response_text})
     except Exception as e:
-        print e
+        print (e)
         return jsonify({"status":"success","response":"Sorry I am not trained to do that yet..."})
 
 

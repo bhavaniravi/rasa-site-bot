@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from urllib import quote_plus as urlquote
+#from urllib import quote_plus as urlquote
+import urllib.parse
 from flask_admin import Admin
 from flask_admin.contrib.sqla import ModelView
 from flask_migrate import Migrate
@@ -32,7 +33,7 @@ class Event(db.Model):
 
 class MyModelView(ModelView):
     def __init__(self, model, session, name=None, category=None, endpoint=None, url=None, **kwargs):
-        for k, v in kwargs.iteritems():
+        for k, v in kwargs.items():
             setattr(self, k, v)
 
         super(MyModelView, self).__init__(model, session, name=name, category=category, endpoint=endpoint, url=url)
@@ -40,3 +41,4 @@ class MyModelView(ModelView):
 
 admin = Admin(app, name='rasa-site-bot', template_mode='bootstrap3')
 admin.add_view(MyModelView(Event, db.session))
+
