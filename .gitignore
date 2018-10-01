@@ -5,3 +5,4 @@ bot-application/migrations
 *.db
 *.dat
 venv
+.idea
