@@ -25,15 +25,24 @@ A site bot build using [rasa-nlu](http://rasa.ai).
 
 3. Initially you need to train your bot to do that you need two json files `config` and 'training_data'.
 
-4. To train your model you can use either 'spacy' or 'mitie' algorithm. For my application I am using mitie.
+4. To train your model you can use either 'spacy' or 'mitie' algorithm. For my application I am using `spacy`.
 
     If you are using `mitie` you should download a `.dat` file from
     https://github.com/mit-nlp/MITIE/releases/download/v0.4/MITIE-models-v0.2.tar.bz2
+    
+    If you're using spacy run the following before training
+    
+    ```
+    python -m spacy download en_core_web_md
+    python -m spacy link en_core_web_md en
+    ```
 
-    `python -m rasa_nlu.train -c config_mitie.json`
-
-    The training may take sometime
-
+5. To train your ML model run. The training will take some time.
+    
+   ```
+   python -m rasa_nlu.train -c config_spacy.json
+   ```
+    
 5. Once the training is done you will have a `models` folder created with a timestamp
 
 6. Now you have to host this model for your bot application to use

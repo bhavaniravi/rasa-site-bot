@@ -7,3 +7,6 @@ gevent
 numpy
 rasa-nlu
 requests
+spacy
+sklearn
+sklearn_crfsuite
