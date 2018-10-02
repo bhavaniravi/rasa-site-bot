@@ -1,0 +1,11 @@
+{
+  "after": "before",
+  "tomorrow": "2",
+  "10 pm": "tomorrow 10 PM",
+  "tommorrow": "tomorrow",
+  "6:30 pm": "10 AM",
+  "am t": "10 AM",
+  "cture hall 6": "Lecture hall",
+  " 30 pm t": "10 AM",
+  "day": "today"
+}

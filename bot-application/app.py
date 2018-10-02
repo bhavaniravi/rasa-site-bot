@@ -14,7 +14,9 @@ def hello_world():
     return render_template('home.html')
 
 
-get_random_response = lambda intent: random.choice(response[intent])
+def get_random_response(intent):
+    print (response[intent])
+    return random.choice(response[intent])
 
 
 def format_entities(entities):
@@ -52,19 +54,20 @@ def chat():
     chat end point that performs NLU using rasa.ai
     and constructs response from response.py
     """
-    try:
-        response = requests.get("http://localhost:5000/parse", params={"q": request.form["text"]})
-        response = response.json()
-        intent = response["intent"]
-        entities = format_entities(response["entities"])
-        if intent == "event-request":
-            response_text = get_event(entities["day"], entities["time"], entities["place"])
-        else:
-            response_text = get_random_response(intent)
-        return jsonify({"status": "success", "response": response_text})
-    except Exception as e:
-        print(e)
-        return jsonify({"status": "success", "response": "Sorry I am not trained to do that yet..."})
+    # try:
+    response = requests.get("http://localhost:5000/parse", params={"q": request.form["text"]})
+    response = response.json()
+    print (response)
+    intent = response.get("intent", {}).get("name", "default")
+    entities = format_entities(response.get("entities", []))
+    if intent == "event-request":
+        response_text = get_event(entities["day"], entities["time"], entities["place"])
+    else:
+        response_text = get_random_response(intent)
+    return jsonify({"status": "success", "response": response_text})
+    # except Exception as e:
+    #     print(e)
+    #     return jsonify({"status": "success", "response": "Sorry I am not trained to do that yet..."})
 
 
 app.config["DEBUG"] = True

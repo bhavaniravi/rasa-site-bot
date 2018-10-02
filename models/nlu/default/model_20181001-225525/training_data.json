@@ -1,0 +1,363 @@
+{
+  "rasa_nlu_data": {
+    "lookup_tables": [],
+    "regex_features": [],
+    "entity_synonyms": [],
+    "common_examples": [
+      {
+        "text": "who are you?",
+        "intent": "intro"
+      },
+      {
+        "text": "what do you do?",
+        "intent": "intro"
+      },
+      {
+        "text": "what can you do for me?",
+        "intent": "intro"
+      },
+      {
+        "text": "hey",
+        "intent": "greet"
+      },
+      {
+        "text": "hey",
+        "intent": "greet"
+      },
+      {
+        "text": "howdy",
+        "intent": "greet"
+      },
+      {
+        "text": "hey there",
+        "intent": "greet"
+      },
+      {
+        "text": "hello",
+        "intent": "greet"
+      },
+      {
+        "text": "hi",
+        "intent": "greet"
+      },
+      {
+        "text": "yes",
+        "intent": "affirm"
+      },
+      {
+        "text": "yep",
+        "intent": "affirm"
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm"
+      },
+      {
+        "text": "bye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "goodbye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "good bye",
+        "intent": "goodbye"
+      },
+      {
+        "text": "stop",
+        "intent": "goodbye"
+      },
+      {
+        "text": "end",
+        "intent": "goodbye"
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm"
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm"
+      },
+      {
+        "text": "ok",
+        "intent": "affirm"
+      },
+      {
+        "text": "great",
+        "intent": "affirm"
+      },
+      {
+        "entities": [
+          {
+            "start": 28,
+            "entity": "time",
+            "value": "now",
+            "end": 31
+          }
+        ],
+        "text": "What is the event happening now",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 40,
+            "entity": "time",
+            "value": "10 AM",
+            "end": 45
+          },
+          {
+            "start": 46,
+            "entity": "day",
+            "value": "today",
+            "end": 51
+          },
+          {
+            "start": 27,
+            "entity": "place",
+            "value": "Lecture hall",
+            "end": 39
+          }
+        ],
+        "text": "What event is happening at Lecture hall 10 AM today",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 18,
+            "entity": "time",
+            "value": "same time",
+            "end": 27
+          },
+          {
+            "start": 28,
+            "entity": "day",
+            "value": "tomorrow",
+            "end": 36
+          }
+        ],
+        "text": "What is the event same time tomorrow",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 27,
+            "entity": "place",
+            "value": "Lecture hall 2",
+            "end": 41
+          },
+          {
+            "start": 52,
+            "entity": "time",
+            "value": "tomorrow 10 PM",
+            "end": 57
+          },
+          {
+            "start": 42,
+            "entity": "day",
+            "value": "tomorrow",
+            "end": 51
+          }
+        ],
+        "text": "What event is happening at Lecture hall 2 tommorrow 10 PM",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 40,
+            "entity": "time",
+            "value": "10 AM",
+            "end": 44
+          },
+          {
+            "start": 45,
+            "entity": "day",
+            "value": "today",
+            "end": 52
+          },
+          {
+            "start": 27,
+            "entity": "place",
+            "value": "Lecture hall",
+            "end": 39
+          }
+        ],
+        "text": "What event is happening at Lecture hall 6 AM today",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 40,
+            "entity": "time",
+            "value": "10 AM",
+            "end": 47
+          },
+          {
+            "start": 48,
+            "entity": "day",
+            "value": "today",
+            "end": 55
+          },
+          {
+            "start": 27,
+            "entity": "place",
+            "value": "Lecture hall",
+            "end": 39
+          }
+        ],
+        "text": "What event is happening at Lecture hall 6:30 PM today",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 40,
+            "entity": "time",
+            "value": "10 AM",
+            "end": 47
+          },
+          {
+            "start": 48,
+            "entity": "day",
+            "value": "today",
+            "end": 55
+          },
+          {
+            "start": 27,
+            "entity": "place",
+            "value": "Lecture hall",
+            "end": 39
+          }
+        ],
+        "text": "What event is happening at Lecture hall 6 30 PM today",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 27,
+            "entity": "time",
+            "value": "6 30 PM",
+            "end": 34
+          },
+          {
+            "start": 35,
+            "entity": "day",
+            "value": "today",
+            "end": 40
+          }
+        ],
+        "text": "What event is happening at 6 30 PM today",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 27,
+            "entity": "time",
+            "value": "6",
+            "end": 28
+          }
+        ],
+        "text": "What event is happening at 6",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 17,
+            "entity": "time",
+            "value": "12",
+            "end": 19
+          }
+        ],
+        "text": "What event is at 12",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 19,
+            "entity": "time",
+            "value": "12",
+            "end": 21
+          },
+          {
+            "start": 12,
+            "entity": "relative-time",
+            "value": "before",
+            "end": 18
+          }
+        ],
+        "text": "list events before 12",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 18,
+            "entity": "time",
+            "value": "5",
+            "end": 19
+          },
+          {
+            "start": 12,
+            "entity": "relative-time",
+            "value": "before",
+            "end": 17
+          }
+        ],
+        "text": "list events after 5",
+        "intent": "event-request"
+      },
+      {
+        "entities": [
+          {
+            "start": 12,
+            "entity": "event_name",
+            "value": "chatbot",
+            "end": 19
+          }
+        ],
+        "text": "when is the chatbot event happening",
+        "intent": "event-time"
+      },
+      {
+        "entities": [
+          {
+            "start": 8,
+            "entity": "event_name",
+            "value": "python 101",
+            "end": 18
+          }
+        ],
+        "text": "when is python 101 event happening",
+        "intent": "event-time"
+      },
+      {
+        "entities": [
+          {
+            "start": 24,
+            "entity": "time",
+            "value": "2",
+            "end": 25
+          },
+          {
+            "start": 26,
+            "entity": "time",
+            "value": "2",
+            "end": 34
+          }
+        ],
+        "text": "what event is happening 2 tomorrow",
+        "intent": "event-request"
+      }
+    ]
+  }
+}

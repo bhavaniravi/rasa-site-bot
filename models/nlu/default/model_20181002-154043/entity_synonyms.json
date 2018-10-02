@@ -1,0 +1,9 @@
+{
+  "tommorrow": "tomorrow",
+  "6 am": "10 AM",
+  "6:30 pm": "10 AM",
+  "tomorrow": "2",
+  "6 30 pm": "10 AM",
+  "after": "before",
+  "10 pm": "tomorrow 10 PM"
+}
