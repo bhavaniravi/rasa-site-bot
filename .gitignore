@@ -6,3 +6,4 @@ bot-application/migrations
 *.dat
 venv
 .idea
+models
