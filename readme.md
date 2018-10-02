@@ -47,7 +47,7 @@ A site bot build using [rasa-nlu](http://rasa.ai).
 
 6. Now you have to host this model for your bot application to use
 
-    `python -m rasa_nlu.server -c AI-engine/config_spacy.json --path ./models/`
+    `python -m rasa_nlu.server -c AI-engine/config_spacy.json --path ./models/nlu/`
 
 7. Now that we have the AI-Engine up and running.Let's setup the knowledge base for the bot run `extract.py` under bot_applications
 
