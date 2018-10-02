@@ -275,6 +275,24 @@
         ]
       },
       {
+        "text": "What event is happening at 6 30 PM today",
+        "intent": "event-request",
+        "entities": [
+          {
+            "start": 27,
+            "end": 34,
+            "value": "10 30 AM",
+            "entity": "time"
+          },
+          {
+            "start": 35,
+            "end": 40,
+            "value": "today",
+            "entity": "day"
+          }
+        ]
+      },
+      {
         "text": "What event is happening at 6",
         "intent": "event-request",
         "entities": [
