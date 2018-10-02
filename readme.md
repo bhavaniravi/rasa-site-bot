@@ -40,18 +40,18 @@ A site bot build using [rasa-nlu](http://rasa.ai).
 5. To train your ML model run. The training will take some time.
     
    ```
-   python -m rasa_nlu.train -c config_spacy.json
+   python -m rasa_nlu.train -c AI-engine/config_spacy.json --data AI-engine/data/sitebot-data.json
    ```
     
 5. Once the training is done you will have a `models` folder created with a timestamp
 
 6. Now you have to host this model for your bot application to use
 
-    `python -m rasa_nlu.server -c config_mitie.json --server_model_dirs=./model_YYYYMMDD-HHMMSS`
+    `python -m rasa_nlu.server -c AI-engine/config_spacy.json --path ./models/nlu/`
 
-7. To setup the knowledge base for the bot run `extract.py` under bot_applications
+7. Now that we have the AI-Engine up and running.Let's setup the knowledge base for the bot run `extract.py` under bot_applications
 
-    `python extract.py`
+    `python bot-applicaiton/extract.py`
     You will have a sqlite `app.db` created
 
 8. To run the application run

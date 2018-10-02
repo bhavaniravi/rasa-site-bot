@@ -8,5 +8,5 @@ numpy
 rasa-nlu
 requests
 spacy
-sklearn
+sklearn==0.19.1
 sklearn_crfsuite
