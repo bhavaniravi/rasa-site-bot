@@ -1,3 +1,5 @@
+> The bot is outdated and not maintained anymore
+
 # Site bot
 A site bot build using [rasa-nlu](http://rasa.ai).
 
