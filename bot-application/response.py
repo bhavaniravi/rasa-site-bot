@@ -11,8 +11,10 @@ response = {
     "events_link": [
         'You can check all the events here <a href="https://conference.pydelhi.org/#schedule_table">PyDelhi events</a>'],
     "no_events": ["No events found"],
+    "period": ["we are currently on period 10 on: <a href='http://google.com' target='_blank'>Google Webpage</a>"],
     "intro": ["I am event bot for pydelhi, I can find you event details in minutes"],
     "default": ["Sorry I am not trained to answer that yet.", "Oops I didn't understand that sorry"]
+    
 }
 
 mapping = {
@@ -22,6 +24,7 @@ mapping = {
     "same time": datetime.datetime.now(),
     "second day": datetime.datetime.now()
 }
+
 
 
 def try_parsing_date(text):
