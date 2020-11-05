@@ -1,5 +1,1 @@
-# If application.py
-gunicorn --bind=0.0.0.0 --timeout 600 --chdir website application:app
-
-# If app.py
-gunicorn --bind=0.0.0.0 --timeout 600 --chdir website app:app
+python3.7 -m aiohttp.web -H localhost -P 8080 package.module:init_func
