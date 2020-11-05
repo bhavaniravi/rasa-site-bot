@@ -31,4 +31,4 @@ jobs:
       with:
         app-name: 'janetbot'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6b5206f98ded4bc88f4c10cb1c51033a }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d7d92c1f17424948888fb814da8bb092 }}
