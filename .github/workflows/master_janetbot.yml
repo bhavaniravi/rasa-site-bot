@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@master
@@ -20,15 +20,19 @@ jobs:
       with:
         python-version: '3.6'
 
-    - name: Build using AppService-Build
-      uses: azure/appservice-build@v2
-      with:
-        platform: python
-        platform-version: '3.6'
+    - name: Install Python dependencies
+      run: |
+        python3 -m venv env
+        .\env\Scripts\activate
+        pip install -r requirements.txt
+
+    - name: Zip the application files
+      run: Compress-Archive .\* app.zip
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'janetbot'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d7d92c1f17424948888fb814da8bb092 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d0694bcb05c642609618b8311d5de300 }}
+        package: '.\myapp.zip'
