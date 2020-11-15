@@ -6,7 +6,7 @@ name: Build and deploy Python app to Azure Web App - janetbot
 on:
   push:
     branches:
-      - master
+      - readme_update
 
 jobs:
   build-and-deploy:
@@ -15,14 +15,14 @@ jobs:
     steps:
     - uses: actions/checkout@master
 
-    - name: Set up Python version
+    - name: Set up Python version 3.6
       uses: actions/setup-python@v1
       with:
         python-version: '3.6'
 
     - name: Install Python dependencies
       run: |
-        python3 -m venv env
+        python -m venv env
         .\env\Scripts\activate
         pip install -r requirements.txt
 
@@ -35,4 +35,4 @@ jobs:
         app-name: 'janetbot'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_d0694bcb05c642609618b8311d5de300 }}
-        package: '.\myapp.zip'
+        package: '.\app.zip'
